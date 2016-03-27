@@ -1,0 +1,17 @@
+﻿<div class="container" ng-class="{'active': isActive}" ng-click="isActive=!isActive">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title" ng-bind="$ctrl.letter.fullName"></h3>
+                    <span ng-bind="$ctrl.letter.email"></span>
+                    <img ng-src="{{$ctrl.letter.avatarUrl}}" />
+                    <button class="destroy" ng-click="$ctrl.remove({letter: $ctrl.letter})"></button>
+                </div>
+                <div class="panel-body" ng-bind="$ctrl.letter.text">
+                </div>
+            </div>
+            <!-- ...usercard -->
+        </div>
+    </div>
+</div>

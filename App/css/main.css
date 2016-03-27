@@ -5,6 +5,8 @@
 
 main {
     font-size:0;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 .main-content,.sidebar {
     display: inline-block;
@@ -43,6 +45,9 @@ main {
     margin: 10px auto;
 }
 
+.list-group-item:hover {
+    cursor:pointer;
+}
 .sidebar .search {
     height: 40px;
     padding: 10px;
