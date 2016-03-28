@@ -1,14 +1,19 @@
-﻿app.component('showLetters', {
+﻿'use strict'
+app.component('showLetters', {
     bindings: {
-        status:'<'
+        status: "<"
     },
     templateUrl: 'App/Components/showLettersTemplate.html',
     controller: function (LetterData) {
-        this.letters = [];
-        LetterData.getLetters().then(letters => {
-            this.letters = letters
-            console.log(this.letters)
-        });
+        let letters = [];
+        var promise = new Promise(resolve =>{
+            resolve(LetterData.getLetters())
+        })
+        promise.then(result=>letters = result);
+        //var self = this;
+        //LetterData.getLetters().then(letters => {
+        //    self.letters = letters
+        //});
 
         this.toDeleted = (letter) => {
             this.letters[this.letters.indexOf(letter)].status = "Deleted";

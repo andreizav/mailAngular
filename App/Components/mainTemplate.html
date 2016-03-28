@@ -2,9 +2,9 @@
     <h2 class="aside-title">Mail Box</h2>
     <input type="email" class="search" placeholder="search by email"/>
     <div class="list-group">
-        <a ng-href="#/inbox" class="list-group-item" ng-class="{'active':$ctrl.mainTitle === 'New'}" ng-click="$ctrl.mainTitle = 'New'">New</a>
-        <a ng-sref="#" class="list-group-item" ng-class="{'active':$ctrl.mainTitle === 'Inbox'}" ng-click="$ctrl.mainTitle = 'Inbox'">Inbox</a>
-        <a ng-sref="#" class="list-group-item" ng-class="{'active':$ctrl.mainTitle === 'Sent'}" ng-click="$ctrl.mainTitle = 'Sent'">Sent</a>
+        <a ng-href="#" class="list-group-item" ng-class="{'active':$ctrl.mainTitle === 'New'}" ng-click="$ctrl.mainTitle = 'New'">New</a>
+        <a ui-sref="inbox" class="list-group-item" ng-class="{'active':$ctrl.mainTitle === 'Inbox'}" ng-click="$ctrl.mainTitle = 'Inbox'">Inbox</a>
+        <a ui-sref="sent" class="list-group-item" ng-class="{'active':$ctrl.mainTitle === 'Sent'}" ng-click="$ctrl.mainTitle = 'Sent'">Sent</a>
         <a ng-sref="#" class="list-group-item" ng-class="{'active':$ctrl.mainTitle === 'Drafts'}" ng-click="$ctrl.mainTitle = 'Drafts'">Drafts</a>
         <a ng-sref="#" class="list-group-item" ng-class="{'active':$ctrl.mainTitle === 'Deleted'}" ng-click="$ctrl.mainTitle = 'Deleted'">Deleted</a>
     </div>

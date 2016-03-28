@@ -3,7 +3,7 @@
         letter: '<',
         remove: '&'
     },
-    templateUrl: 'letterTemplate.html',
+    templateUrl: 'App/Components/letterTemplate.html',
     controller: function () {
 
     }

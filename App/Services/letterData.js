@@ -1,8 +1,20 @@
-﻿app.service('LetterData', function ($http) {
+﻿'use strict'
+
+app.service('LetterData', function ($http) {
+    let letters = [];
+
+    $http.get('https://my-mail.firebaseio.com/letters.json')
+        .then((response) => {
+            letters = normalizeToArray(response.data)
+        })
+
     this.getLetters = () => {
-        return $http.get('https://my-mail.firebaseio.com/letters.json')
-          .then(response => normalizeToArray(response.data));
+        //return $http.get('https://my-mail.firebaseio.com/letters.json')
+        //  .then(response => normalizeToArray(response.data));
+
+        return letters;
     }
+
     this.setLetters = (letter) => {
         return $http.post('https://my-mail.firebaseio.com/letters.json', letter)
           .then(response => {
